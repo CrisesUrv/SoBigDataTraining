@@ -1,1 +1,1 @@
-# privacy_lib
+# Anonymization and antidiscrimination training
