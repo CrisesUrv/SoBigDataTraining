@@ -1,1 +1,1 @@
-# Anonymization library
+# Anonymization and antidiscrimination training
