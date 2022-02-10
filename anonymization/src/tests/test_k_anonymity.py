@@ -27,8 +27,11 @@ References:
 # path_csv = "../../input_datasets/toy_all_types.csv"
 # path_settings = "../../input_datasets/metadata_toy_all_types.xml"
 # dataset = Dataset_CSV(path_csv, path_settings, ",")
-path_csv = "../../input_datasets/toy_all_types.csv"
-path_settings = "../../input_datasets/metadata_toy_all_types.xml"
+# path_csv = "../../input_datasets/toy_all_types.csv"
+# path_settings = "../../input_datasets/metadata_toy_all_types.xml"
+path_csv = "https://raw.github.com/CrisesUrv/SoBigDataTraining/master/anonymization/input_datasets/toy_all_types.csv"
+path_settings = "https://raw.github.com/CrisesUrv/SoBigDataTraining/master/anonymization/input_datasets" \
+                "/metadata_toy_all_types.xml"
 data_frame = utils.read_dataframe_from_csv(path_csv)
 # dataset = Dataset_CSV(path_csv, path_settings, ",")
 dataset = Dataset_DataFrame(data_frame, path_settings)

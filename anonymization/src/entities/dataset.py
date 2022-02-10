@@ -9,6 +9,7 @@ from anonymization.src.entities.record import Record
 from anonymization.src.utils.sensitivity_type import Sensitivity_type
 from anonymization.src.utils import constants
 import random
+from urllib.request import urlopen
 
 
 class Dataset(ABC):
@@ -151,7 +152,10 @@ class Dataset(ABC):
         Loads the dataset metadata describing each attribute type
         """
         if self.settings_path is not None:
-            doc = minidom.parse(self.settings_path)
+            if self.settings_path.startswith('http://') or self.settings_path.startswith('https://'):
+                doc = minidom.parse(urlopen(self.settings_path))
+            else:
+                doc = minidom.parse(self.settings_path)
             attributes_setting = doc.getElementsByTagName(constants.ATTRIBUTE)
             for attribute in attributes_setting:
                 name = attribute.getAttribute("name")
