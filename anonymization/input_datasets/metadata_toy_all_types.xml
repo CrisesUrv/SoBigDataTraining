@@ -60,7 +60,7 @@ in function of the input data of the attribute.
 	<attribute
 		name="native-country"
 		sensitivity_type="quasi_identifier"
-		attribute_type="semantic_categorical_wordnet">
+		attribute_type="plain_categorical">
 	</attribute>
 	<attribute
 		name="age"
